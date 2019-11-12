@@ -77,7 +77,7 @@ endif
 
 docker-build: local-protos local-pyvoltha
 	docker build $(DOCKER_BUILD_ARGS) \
-    -t ${ADAPTER_IMAGENAME} \
+    -t karthikd29/open-onu:1 -t ${ADAPTER_IMAGENAME} \
     --build-arg LOCAL_PYVOLTHA=$(LOCAL_PYVOLTHA) \
     --build-arg LOCAL_PROTOS=$(LOCAL_PROTOS) \
     --build-arg org_label_schema_version="${VERSION}" \
